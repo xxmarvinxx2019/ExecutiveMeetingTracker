@@ -1,0 +1,148 @@
+import { Product, StockMovement, Supplier, Category } from './types';
+
+export const mockProducts: Product[] = [
+  {
+    id: '1',
+    name: 'Wireless Bluetooth Headphones',
+    sku: 'WBH-001',
+    category: 'Electronics',
+    quantity: 45,
+    price: 99.99,
+    cost: 65.00,
+    supplier: 'TechSupply Co',
+    location: 'Warehouse A-1',
+    status: 'in-stock',
+    lastUpdated: '2025-07-01T10:30:00Z',
+    minStockLevel: 10,
+  },
+  {
+    id: '2',
+    name: 'USB-C Charging Cable',
+    sku: 'USC-002',
+    category: 'Electronics',
+    quantity: 8,
+    price: 19.99,
+    cost: 8.50,
+    supplier: 'Cable World',
+    location: 'Warehouse A-2',
+    status: 'low-stock',
+    lastUpdated: '2025-07-01T09:15:00Z',
+    minStockLevel: 20,
+  },
+  {
+    id: '3',
+    name: 'Ergonomic Office Chair',
+    sku: 'EOC-003',
+    category: 'Furniture',
+    quantity: 0,
+    price: 299.99,
+    cost: 180.00,
+    supplier: 'Office Solutions',
+    location: 'Warehouse B-1',
+    status: 'out-of-stock',
+    lastUpdated: '2025-06-30T14:20:00Z',
+    minStockLevel: 5,
+  },
+  {
+    id: '4',
+    name: 'Stainless Steel Water Bottle',
+    sku: 'SWB-004',
+    category: 'Home & Garden',
+    quantity: 120,
+    price: 24.99,
+    cost: 12.00,
+    supplier: 'Eco Products Inc',
+    location: 'Warehouse C-1',
+    status: 'in-stock',
+    lastUpdated: '2025-07-01T11:45:00Z',
+    minStockLevel: 25,
+  },
+];
+
+export const mockStockMovements: StockMovement[] = [
+  {
+    id: '1',
+    productId: '1',
+    type: 'in',
+    quantity: 50,
+    reason: 'New shipment received',
+    timestamp: '2025-07-01T08:00:00Z',
+    userId: 'user123',
+  },
+  {
+    id: '2',
+    productId: '2',
+    type: 'out',
+    quantity: 12,
+    reason: 'Customer order fulfillment',
+    timestamp: '2025-07-01T09:30:00Z',
+    userId: 'user456',
+  },
+  {
+    id: '3',
+    productId: '4',
+    type: 'adjustment',
+    quantity: -5,
+    reason: 'Inventory count correction',
+    timestamp: '2025-06-30T16:00:00Z',
+    userId: 'user789',
+  },
+];
+
+export const mockSuppliers: Supplier[] = [
+  {
+    id: '1',
+    name: 'TechSupply Co',
+    contact: 'John Smith',
+    email: 'john@techsupply.com',
+    phone: '+1-555-0123',
+    address: '123 Tech Street, Silicon Valley, CA 94000',
+  },
+  {
+    id: '2',
+    name: 'Cable World',
+    contact: 'Sarah Johnson',
+    email: 'sarah@cableworld.com',
+    phone: '+1-555-0456',
+    address: '456 Cable Ave, New York, NY 10001',
+  },
+  {
+    id: '3',
+    name: 'Office Solutions',
+    contact: 'Mike Davis',
+    email: 'mike@officesolutions.com',
+    phone: '+1-555-0789',
+    address: '789 Office Blvd, Chicago, IL 60601',
+  },
+  {
+    id: '4',
+    name: 'Eco Products Inc',
+    contact: 'Lisa Green',
+    email: 'lisa@ecoproducts.com',
+    phone: '+1-555-0321',
+    address: '321 Green Way, Portland, OR 97201',
+  },
+];
+
+export const mockCategories: Category[] = [
+  {
+    id: '1',
+    name: 'Electronics',
+    description: 'Electronic devices and accessories',
+  },
+  {
+    id: '2',
+    name: 'Furniture',
+    description: 'Office and home furniture items',
+  },
+  {
+    id: '3',
+    name: 'Home & Garden',
+    description: 'Home improvement and garden supplies',
+  },
+  {
+    id: '4',
+    name: 'Clothing',
+    description: 'Apparel and fashion accessories',
+  },
+];
